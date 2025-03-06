@@ -1,0 +1,7 @@
+platform:ios,'9.0'
+
+target 'Look At the World' do
+
+pod 'Masonry'
+
+end
