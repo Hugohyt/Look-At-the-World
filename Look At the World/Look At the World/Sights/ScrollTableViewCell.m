@@ -27,8 +27,8 @@ static const int width = 394;
     
     self.backgroundColor = [UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0];;
     
-    self.sightsScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width, 400)];
-    self.sightsScrollView.contentSize = CGSizeMake(width * 10, 400);
+    self.sightsScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, width - 20, 240)];
+    self.sightsScrollView.contentSize = CGSizeMake((width - 20) * 10, 240);
     
     self.sightsScrollView.pagingEnabled = YES;
     self.sightsScrollView.bounces = YES;
@@ -37,7 +37,7 @@ static const int width = 394;
     self.sightsScrollView.showsHorizontalScrollIndicator = NO;
     self.sightsScrollView.delegate = self;
     
-    [self.sightsScrollView setContentOffset:CGPointMake(width, 0)];
+    [self.sightsScrollView setContentOffset:CGPointMake(width - 20, 0)];
     
     [self.contentView addSubview:self.sightsScrollView];
     if (!self.timer) {
@@ -49,7 +49,7 @@ static const int width = 394;
 
 - (void)scrollToNext {
     CGFloat contentOffsetX = self.sightsScrollView.contentOffset.x;
-    [self.sightsScrollView setContentOffset:CGPointMake(contentOffsetX + width, 0) animated:YES];
+    [self.sightsScrollView setContentOffset:CGPointMake(contentOffsetX + width - 20, 0) animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

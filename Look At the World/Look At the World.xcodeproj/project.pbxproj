@@ -43,6 +43,14 @@
 		F2557B192D7890180033AEC2 /* 香港.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B182D7890180033AEC2 /* 香港.jpg */; };
 		F2557B1B2D79985F0033AEC2 /* 字魂古藤手书(商用需授权).ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2557B1A2D7997E70033AEC2 /* 字魂古藤手书(商用需授权).ttf */; };
 		F2557B1D2D79B0B20033AEC2 /* 头像.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B1C2D79B0B20033AEC2 /* 头像.jpg */; };
+		F2557B632D7DC9720033AEC2 /* 北京按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B622D7DC9720033AEC2 /* 北京按钮.jpg */; };
+		F2557B6B2D7DC97E0033AEC2 /* 深圳按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B642D7DC97E0033AEC2 /* 深圳按钮.jpg */; };
+		F2557B6C2D7DC97E0033AEC2 /* 桂林按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B652D7DC97E0033AEC2 /* 桂林按钮.jpg */; };
+		F2557B6D2D7DC97E0033AEC2 /* 成都按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B662D7DC97E0033AEC2 /* 成都按钮.jpg */; };
+		F2557B6E2D7DC97E0033AEC2 /* 大理按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B672D7DC97E0033AEC2 /* 大理按钮.jpg */; };
+		F2557B6F2D7DC97E0033AEC2 /* 三亚按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B682D7DC97E0033AEC2 /* 三亚按钮.jpg */; };
+		F2557B702D7DC97E0033AEC2 /* 大连按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B692D7DC97E0033AEC2 /* 大连按钮.jpg */; };
+		F2557B712D7DC97E0033AEC2 /* 杭州按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B6A2D7DC97E0033AEC2 /* 杭州按钮.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +126,14 @@
 		F2557B182D7890180033AEC2 /* 香港.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "香港.jpg"; sourceTree = "<group>"; };
 		F2557B1A2D7997E70033AEC2 /* 字魂古藤手书(商用需授权).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "字魂古藤手书(商用需授权).ttf"; sourceTree = "<group>"; };
 		F2557B1C2D79B0B20033AEC2 /* 头像.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "头像.jpg"; sourceTree = "<group>"; };
+		F2557B622D7DC9720033AEC2 /* 北京按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "北京按钮.jpg"; sourceTree = "<group>"; };
+		F2557B642D7DC97E0033AEC2 /* 深圳按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "深圳按钮.jpg"; sourceTree = "<group>"; };
+		F2557B652D7DC97E0033AEC2 /* 桂林按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "桂林按钮.jpg"; sourceTree = "<group>"; };
+		F2557B662D7DC97E0033AEC2 /* 成都按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "成都按钮.jpg"; sourceTree = "<group>"; };
+		F2557B672D7DC97E0033AEC2 /* 大理按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "大理按钮.jpg"; sourceTree = "<group>"; };
+		F2557B682D7DC97E0033AEC2 /* 三亚按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "三亚按钮.jpg"; sourceTree = "<group>"; };
+		F2557B692D7DC97E0033AEC2 /* 大连按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "大连按钮.jpg"; sourceTree = "<group>"; };
+		F2557B6A2D7DC97E0033AEC2 /* 杭州按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "杭州按钮.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +168,6 @@
 				5362EAF8F97A8D7B09AEA6BC /* Pods-Look At the World.debug.xcconfig */,
 				C65E75971F4B8AF96D0DDB83 /* Pods-Look At the World.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -263,6 +278,14 @@
 		F2557AEC2D77342D0033AEC2 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				F2557B662D7DC97E0033AEC2 /* 成都按钮.jpg */,
+				F2557B672D7DC97E0033AEC2 /* 大理按钮.jpg */,
+				F2557B692D7DC97E0033AEC2 /* 大连按钮.jpg */,
+				F2557B652D7DC97E0033AEC2 /* 桂林按钮.jpg */,
+				F2557B6A2D7DC97E0033AEC2 /* 杭州按钮.jpg */,
+				F2557B682D7DC97E0033AEC2 /* 三亚按钮.jpg */,
+				F2557B642D7DC97E0033AEC2 /* 深圳按钮.jpg */,
+				F2557B622D7DC9720033AEC2 /* 北京按钮.jpg */,
 				F2557B1C2D79B0B20033AEC2 /* 头像.jpg */,
 				F2557B0A2D788F700033AEC2 /* 北京.jpg */,
 				F2557B0C2D788F9C0033AEC2 /* 西安.jpg */,
@@ -389,13 +412,21 @@
 				F2557B112D788FB10033AEC2 /* 内蒙古.jpg in Resources */,
 				F2557AF02D7734480033AEC2 /* 美食.jpg in Resources */,
 				F2557AF42D7734570033AEC2 /* 历史.jpg in Resources */,
+				F2557B712D7DC97E0033AEC2 /* 杭州按钮.jpg in Resources */,
 				F2557AB32D772AF60033AEC2 /* Assets.xcassets in Resources */,
+				F2557B6B2D7DC97E0033AEC2 /* 深圳按钮.jpg in Resources */,
 				F2557B0B2D788F700033AEC2 /* 北京.jpg in Resources */,
+				F2557B632D7DC9720033AEC2 /* 北京按钮.jpg in Resources */,
+				F2557B6E2D7DC97E0033AEC2 /* 大理按钮.jpg in Resources */,
+				F2557B702D7DC97E0033AEC2 /* 大连按钮.jpg in Resources */,
 				F2557AB62D772AF60033AEC2 /* Base in Resources */,
 				F2557B0D2D788F9C0033AEC2 /* 西安.jpg in Resources */,
+				F2557B6C2D7DC97E0033AEC2 /* 桂林按钮.jpg in Resources */,
 				F2557B1B2D79985F0033AEC2 /* 字魂古藤手书(商用需授权).ttf in Resources */,
 				F2557AFE2D77420F0033AEC2 /* 字小魂菱方体(商用需授权).ttf in Resources */,
 				F2557AEE2D77343F0033AEC2 /* 风景.jpg in Resources */,
+				F2557B6D2D7DC97E0033AEC2 /* 成都按钮.jpg in Resources */,
+				F2557B6F2D7DC97E0033AEC2 /* 三亚按钮.jpg in Resources */,
 				F2557AB12D772AF40033AEC2 /* Base in Resources */,
 				F2557B1D2D79B0B20033AEC2 /* 头像.jpg in Resources */,
 				F2557B172D788FDF0033AEC2 /* 哈尔滨.jpg in Resources */,

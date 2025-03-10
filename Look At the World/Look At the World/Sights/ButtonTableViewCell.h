@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ButtonTableViewCell : UITableViewCell
 
+@property (strong, nonatomic, readwrite)NSMutableArray<UIButton *> *buttons;
+
 @end
 
 NS_ASSUME_NONNULL_END

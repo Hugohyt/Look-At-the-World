@@ -38,10 +38,10 @@
 //    self.sightsProductionLabel.textColor = [UIColor ];
     
     self.sightsNameLabel.font = [UIFont systemFontOfSize:30];
-    self.sightsNameLabel.textColor = [UIColor colorWithRed:0.4 green:0.4 blue:0.3 alpha:1];
+    self.sightsNameLabel.textColor = [UIColor colorWithRed:91/255.0 green:58/255.0 blue:41/255.0 alpha:1.0];
     
     self.sightsProductionLabel.font = [UIFont systemFontOfSize:16];
-    self.sightsProductionLabel.textColor = [UIColor colorWithRed:0.5 green:0.4 blue:0.3 alpha:1];
+    self.sightsProductionLabel.textColor = [UIColor colorWithRed:184/255.0 green:154/255.0 blue:116/255.0 alpha:1.0];
     self.sightsProductionLabel.numberOfLines = 0;
     self.sightsProductionLabel.lineBreakMode = YES;
     

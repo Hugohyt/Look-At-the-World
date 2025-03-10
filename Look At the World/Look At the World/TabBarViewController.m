@@ -57,7 +57,7 @@
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName: customFont,
                                                         NSForegroundColorAttributeName: [UIColor brownColor]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName: customFont,
-                                                        NSForegroundColorAttributeName: [UIColor colorWithRed:0.5 green:0.25 blue:0 alpha:1]} forState:UIControlStateSelected];
+                                                        NSForegroundColorAttributeName: [UIColor colorWithRed:155/255.0 green:44/255.0 blue:44/255.0 alpha:1.0]} forState:UIControlStateSelected];
     
     tabBarSightsItem.titlePositionAdjustment = UIOffsetMake(0, +10);
     tabBarFoodsItem.titlePositionAdjustment = UIOffsetMake(0, +10);

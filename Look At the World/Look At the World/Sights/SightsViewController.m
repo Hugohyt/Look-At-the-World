@@ -49,8 +49,6 @@
     avatarButton.layer.masksToBounds = YES;
     [avatarButton setImage:[UIImage imageNamed:@"头像.jpg"] forState:UIControlStateNormal];
     
-    UIBarButtonItem *avatarItem = [[UIBarButtonItem alloc] initWithCustomView:avatarButton];
-    
     [self.navigationController.navigationBar addSubview:searchView];
     [self.navigationController.navigationBar addSubview:avatarButton];
     
@@ -73,11 +71,11 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 1) {
+    if (section == 2) {
         return 5;
     } else {
         return 1;
@@ -86,7 +84,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 400;
+        return 240;
+    } else if (indexPath.section == 1){
+        return 200;
     } else {
         return 120;
     }
@@ -102,17 +102,21 @@
         for (int i = 0; i <= 15; i++) {
             UIImageView* imageView = [[UIImageView alloc] init];
             if (i == 15) {
-                imageView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 400);
+                imageView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width - 20, 240);
             } else {
-                imageView.frame = CGRectMake((i + 1) * 394, 0, 394, 400);
+                imageView.frame = CGRectMake((i + 1) * (394 - 20), 0, 394 - 20, 240);
             }
             imageView.image = array[i % 8];
+
             [scrollTableViewCell.sightsScrollView addSubview:imageView];
+            
+            imageView.layer.cornerRadius = 10;
+            imageView.layer.masksToBounds = YES;
             
             UILabel* titleLabel = [[UILabel alloc] init];
             titleLabel.text = titleArray[i % 8];
-            titleLabel.frame = CGRectMake((i + 1) * 394 + 20, 300, 400, 80);
-            [titleLabel setFont:[UIFont fontWithName:@"zihungutengshoushu_T" size:80]];
+            titleLabel.frame = CGRectMake((i + 1) * 374 + 20, 160, 400, 70);
+            [titleLabel setFont:[UIFont fontWithName:@"zihungutengshoushu_T" size:60]];
             [titleLabel setTextColor:[UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0]];
             
             titleLabel.layer.shadowColor = [UIColor colorWithRed:0.3 green:0.25 blue:0.2 alpha:1].CGColor;
@@ -126,7 +130,7 @@
         
         return scrollTableViewCell;
         
-    } else if (indexPath.section == 3) {
+    } else if (indexPath.section == 1) {
         
         ButtonTableViewCell* buttonTableViewCell = [self.sightsView.sightsTableView dequeueReusableCellWithIdentifier:@"ButtonTableViewCell"];
         
@@ -134,6 +138,7 @@
         
     } else {
         ListTableViewCell* listTableViewCell = [self.sightsView.sightsTableView dequeueReusableCellWithIdentifier:@"ListTableViewCell"];
+
         return listTableViewCell;
     }
 }
