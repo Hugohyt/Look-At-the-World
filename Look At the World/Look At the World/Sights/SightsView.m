@@ -12,14 +12,12 @@
 
 static const CGFloat width = 394;
 
-@class FoodsViewController;
-
 @implementation SightsView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    self.sightsTableView = [[UITableView alloc] init];
-    self.sightsTableView.frame = CGRectMake(10, 0, width - 20, 660);
+    self.sightsTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, width - 20, 660) style:UITableViewStylePlain];
+    self.sightsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.sightsTableView registerClass:[ScrollTableViewCell class] forCellReuseIdentifier:@"ScrollTableViewCell"];
     [self.sightsTableView registerClass:[ButtonTableViewCell class] forCellReuseIdentifier:@"ButtonTableViewCell"];
     [self.sightsTableView registerClass:[ListTableViewCell class] forCellReuseIdentifier:@"ListTableViewCell"];

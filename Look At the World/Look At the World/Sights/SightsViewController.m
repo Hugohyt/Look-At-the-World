@@ -22,14 +22,28 @@
     self.sightsView = [[SightsView alloc] initWithFrame:self.view.frame];
     self.sightsView.sightsTableView.delegate = self;
     self.sightsView.sightsTableView.dataSource = self;
-    [self.sightsView.sightsTableView setBackgroundColor:[UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0]];
+    [self.sightsView.sightsTableView setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:self.sightsView];
+    
+    UIImageView *layerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 660, 394, 136)];
+    [layerImageView setBackgroundColor:[UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0]];
+    [self.sightsView addSubview:layerImageView];
     
     [self loadNavgationBar];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 20;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 20)];
+    footerView.backgroundColor = [UIColor clearColor];
+    return footerView;
+}
+
 - (void)loadNavgationBar {
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     
@@ -71,15 +85,11 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 7;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 2) {
-        return 5;
-    } else {
         return 1;
-    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -94,7 +104,7 @@
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        ScrollTableViewCell* scrollTableViewCell = [self.sightsView.sightsTableView dequeueReusableCellWithIdentifier:@"ScrollTableViewCell"];
+        ScrollTableViewCell* scrollTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"ScrollTableViewCell"];
         
         NSArray* array = [NSArray arrayWithObjects:[UIImage imageNamed:@"北京.jpg"], [UIImage imageNamed:@"西安.jpg"],  [UIImage imageNamed:@"甘肃.jpg"], [UIImage imageNamed:@"内蒙古.jpg"], [UIImage imageNamed:@"杭州.jpg"], [UIImage imageNamed:@"哈尔滨.jpg"], [UIImage imageNamed:@"西藏.jpg"], [UIImage imageNamed:@"香港.jpg"], nil];
         NSArray* titleArray = [NSArray arrayWithObjects:@"北 京", @"西 安", @"甘 肃", @"内蒙古", @"杭 州", @"哈尔滨", @"西 藏", @"香 港", nil];
@@ -132,13 +142,22 @@
         
     } else if (indexPath.section == 1) {
         
-        ButtonTableViewCell* buttonTableViewCell = [self.sightsView.sightsTableView dequeueReusableCellWithIdentifier:@"ButtonTableViewCell"];
+        ButtonTableViewCell* buttonTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"ButtonTableViewCell"];
+        buttonTableViewCell.layer.masksToBounds = NO; // 关闭裁剪
+        buttonTableViewCell.layer.shadowColor = [UIColor blackColor].CGColor; // 阴影颜色
+        buttonTableViewCell.layer.shadowOffset = CGSizeMake(2, 2); // 阴影偏移量
+        buttonTableViewCell.layer.shadowOpacity = 0.3; // 阴影透明度
+        buttonTableViewCell.layer.shadowRadius = 4;
         
         return buttonTableViewCell;
         
     } else {
-        ListTableViewCell* listTableViewCell = [self.sightsView.sightsTableView dequeueReusableCellWithIdentifier:@"ListTableViewCell"];
-
+        ListTableViewCell* listTableViewCell = [tableView dequeueReusableCellWithIdentifier:@"ListTableViewCell"];
+        listTableViewCell.layer.masksToBounds = NO; // 关闭裁剪
+        listTableViewCell.layer.shadowColor = [UIColor blackColor].CGColor; // 阴影颜色
+        listTableViewCell.layer.shadowOffset = CGSizeMake(2, 2); // 阴影偏移量
+        listTableViewCell.layer.shadowOpacity = 0.3; // 阴影透明度
+        listTableViewCell.layer.shadowRadius = 4;
         return listTableViewCell;
     }
 }

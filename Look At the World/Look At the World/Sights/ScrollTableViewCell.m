@@ -37,6 +37,8 @@ static const int width = 394;
     self.sightsScrollView.showsHorizontalScrollIndicator = NO;
     self.sightsScrollView.delegate = self;
     
+    self.sightsScrollView.decelerationRate = UIScrollViewDecelerationRateFast;
+    
     [self.sightsScrollView setContentOffset:CGPointMake(width - 20, 0)];
     
     [self.contentView addSubview:self.sightsScrollView];

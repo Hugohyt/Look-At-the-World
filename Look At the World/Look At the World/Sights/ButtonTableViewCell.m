@@ -23,7 +23,7 @@
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    [self setBackgroundColor:[UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0]];
+    [self setBackgroundColor:[UIColor whiteColor]];
     NSArray *images = [NSArray arrayWithObjects:[UIImage imageNamed:@"北京按钮.jpg"], [UIImage imageNamed:@"深圳按钮.jpg"], [UIImage imageNamed:@"三亚按钮.jpg"], [UIImage imageNamed:@"杭州按钮.jpg"], [UIImage imageNamed:@"桂林按钮.jpg"], [UIImage imageNamed:@"大连按钮.jpg"], [UIImage imageNamed:@"大理按钮.jpg"], [UIImage imageNamed:@"成都按钮.jpg"], nil];
     NSArray* titles = [NSArray arrayWithObjects:@"北京", @"深圳", @"三亚", @"杭州", @"桂林", @"大连", @"大理", @"成都", nil];
     
@@ -35,7 +35,6 @@
         [button setTitleColor:[UIColor colorWithRed:184/255.0 green:154/255.0 blue:116/255.0 alpha:1.0] forState:UIControlStateNormal];
         [self.contentView addSubview:button];
         [self.buttons addObject:button];
-        CGFloat spacing = 5;
         button.imageEdgeInsets = UIEdgeInsetsMake(-20, 0, 0, -button.titleLabel.intrinsicContentSize.width);
         button.titleEdgeInsets = UIEdgeInsetsMake(50, -50, 0, 0);
     }

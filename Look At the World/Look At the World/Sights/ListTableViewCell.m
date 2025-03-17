@@ -23,7 +23,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    [self setBackgroundColor:[UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0]];
+    [self setBackgroundColor:[UIColor whiteColor]];
     
     self.sightsImageView = [[UIImageView alloc] init];
     self.sightsProductionLabel = [[UILabel alloc] init];
@@ -34,8 +34,6 @@
     self.sightsProductionLabel.frame = CGRectMake(130, 40, 264, 60);
     self.sightsLocationLabel.frame = CGRectMake(130, 96, 394, 20);
     self.sightsNameLabel.frame = CGRectMake(130, 10, 394, 40);
-    
-//    self.sightsProductionLabel.textColor = [UIColor ];
     
     self.sightsNameLabel.font = [UIFont systemFontOfSize:30];
     self.sightsNameLabel.textColor = [UIColor colorWithRed:91/255.0 green:58/255.0 blue:41/255.0 alpha:1.0];

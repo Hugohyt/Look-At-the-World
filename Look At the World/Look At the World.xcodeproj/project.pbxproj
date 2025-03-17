@@ -51,6 +51,20 @@
 		F2557B6F2D7DC97E0033AEC2 /* 三亚按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B682D7DC97E0033AEC2 /* 三亚按钮.jpg */; };
 		F2557B702D7DC97E0033AEC2 /* 大连按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B692D7DC97E0033AEC2 /* 大连按钮.jpg */; };
 		F2557B712D7DC97E0033AEC2 /* 杭州按钮.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B6A2D7DC97E0033AEC2 /* 杭州按钮.jpg */; };
+		F2557B852D8050CD0033AEC2 /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557B842D8050CD0033AEC2 /* HistoryView.m */; };
+		F2557B882D8050E20033AEC2 /* HistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557B872D8050E20033AEC2 /* HistoryModel.m */; };
+		F2557B8E2D8054380033AEC2 /* WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557B8D2D8054380033AEC2 /* WaterFallLayout.m */; };
+		F2557B912D805ACC0033AEC2 /* HistoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557B902D805ACC0033AEC2 /* HistoryCollectionViewCell.m */; };
+		F2557B932D805E860033AEC2 /* 历史封面.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B922D805E860033AEC2 /* 历史封面.jpg */; };
+		F2557B952D806AE90033AEC2 /* 点赞.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B942D806AE90033AEC2 /* 点赞.jpg */; };
+		F2557B982D8074F60033AEC2 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557B972D8074F50033AEC2 /* VideoViewController.m */; };
+		F2557B9B2D82F5F30033AEC2 /* 视频.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F2557B9A2D82F3470033AEC2 /* 视频.mp4 */; };
+		F2557B9D2D8303B10033AEC2 /* 暂停.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B9C2D8303B10033AEC2 /* 暂停.jpg */; };
+		F2557B9F2D830A0D0033AEC2 /* 返回.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557B9E2D830A0D0033AEC2 /* 返回.jpg */; };
+		F2557BA32D830B8E0033AEC2 /* 评论.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557BA02D830B8D0033AEC2 /* 评论.jpg */; };
+		F2557BA42D830B8E0033AEC2 /* 收藏.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557BA12D830B8D0033AEC2 /* 收藏.jpg */; };
+		F2557BA52D830B8E0033AEC2 /* 视频点赞.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2557BA22D830B8D0033AEC2 /* 视频点赞.jpg */; };
+		F2557BA82D830CD80033AEC2 /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557BA72D830CD80033AEC2 /* VideoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +148,26 @@
 		F2557B682D7DC97E0033AEC2 /* 三亚按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "三亚按钮.jpg"; sourceTree = "<group>"; };
 		F2557B692D7DC97E0033AEC2 /* 大连按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "大连按钮.jpg"; sourceTree = "<group>"; };
 		F2557B6A2D7DC97E0033AEC2 /* 杭州按钮.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "杭州按钮.jpg"; sourceTree = "<group>"; };
+		F2557B832D8050CD0033AEC2 /* HistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryView.h; sourceTree = "<group>"; };
+		F2557B842D8050CD0033AEC2 /* HistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryView.m; sourceTree = "<group>"; };
+		F2557B862D8050E20033AEC2 /* HistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryModel.h; sourceTree = "<group>"; };
+		F2557B872D8050E20033AEC2 /* HistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryModel.m; sourceTree = "<group>"; };
+		F2557B8C2D8054380033AEC2 /* WaterFallLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFallLayout.h; sourceTree = "<group>"; };
+		F2557B8D2D8054380033AEC2 /* WaterFallLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFallLayout.m; sourceTree = "<group>"; };
+		F2557B8F2D805ACC0033AEC2 /* HistoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCollectionViewCell.h; sourceTree = "<group>"; };
+		F2557B902D805ACC0033AEC2 /* HistoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCollectionViewCell.m; sourceTree = "<group>"; };
+		F2557B922D805E860033AEC2 /* 历史封面.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "历史封面.jpg"; sourceTree = "<group>"; };
+		F2557B942D806AE90033AEC2 /* 点赞.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "点赞.jpg"; sourceTree = "<group>"; };
+		F2557B962D8074F50033AEC2 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		F2557B972D8074F50033AEC2 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		F2557B9A2D82F3470033AEC2 /* 视频.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "视频.mp4"; sourceTree = "<group>"; };
+		F2557B9C2D8303B10033AEC2 /* 暂停.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "暂停.jpg"; sourceTree = "<group>"; };
+		F2557B9E2D830A0D0033AEC2 /* 返回.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "返回.jpg"; sourceTree = "<group>"; };
+		F2557BA02D830B8D0033AEC2 /* 评论.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "评论.jpg"; sourceTree = "<group>"; };
+		F2557BA12D830B8D0033AEC2 /* 收藏.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "收藏.jpg"; sourceTree = "<group>"; };
+		F2557BA22D830B8D0033AEC2 /* 视频点赞.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "视频点赞.jpg"; sourceTree = "<group>"; };
+		F2557BA62D830CD80033AEC2 /* VideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
+		F2557BA72D830CD80033AEC2 /* VideoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,10 +249,8 @@
 				F2557AEC2D77342D0033AEC2 /* 图片 */,
 				F2557AE92D7730E10033AEC2 /* TabBarViewController.h */,
 				F2557AEA2D7730E10033AEC2 /* TabBarViewController.m */,
-				F2557AF52D7735E80033AEC2 /* BooksViewController.h */,
-				F2557AF62D7735E80033AEC2 /* BooksViewController.m */,
-				F2557AF82D7735F10033AEC2 /* HistoryViewController.h */,
-				F2557AF92D7735F10033AEC2 /* HistoryViewController.m */,
+				F2557B732D7F04FD0033AEC2 /* Books */,
+				F2557B722D7F04E80033AEC2 /* History */,
 				F2557AE82D772FE50033AEC2 /* Foods */,
 				F2557ADE2D772CFA0033AEC2 /* Sights */,
 				F2557AAF2D772AF40033AEC2 /* Main.storyboard */,
@@ -278,6 +310,7 @@
 		F2557AEC2D77342D0033AEC2 /* 图片 */ = {
 			isa = PBXGroup;
 			children = (
+				F2557B922D805E860033AEC2 /* 历史封面.jpg */,
 				F2557B662D7DC97E0033AEC2 /* 成都按钮.jpg */,
 				F2557B672D7DC97E0033AEC2 /* 大理按钮.jpg */,
 				F2557B692D7DC97E0033AEC2 /* 大连按钮.jpg */,
@@ -299,8 +332,45 @@
 				F2557AFB2D773E6F0033AEC2 /* 书籍.jpg */,
 				F2557AEF2D7734480033AEC2 /* 美食.jpg */,
 				F2557AED2D77343F0033AEC2 /* 风景.jpg */,
+				F2557B942D806AE90033AEC2 /* 点赞.jpg */,
+				F2557B9A2D82F3470033AEC2 /* 视频.mp4 */,
+				F2557B9C2D8303B10033AEC2 /* 暂停.jpg */,
+				F2557B9E2D830A0D0033AEC2 /* 返回.jpg */,
+				F2557BA22D830B8D0033AEC2 /* 视频点赞.jpg */,
+				F2557BA02D830B8D0033AEC2 /* 评论.jpg */,
+				F2557BA12D830B8D0033AEC2 /* 收藏.jpg */,
 			);
 			path = "图片";
+			sourceTree = "<group>";
+		};
+		F2557B722D7F04E80033AEC2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F2557AF82D7735F10033AEC2 /* HistoryViewController.h */,
+				F2557AF92D7735F10033AEC2 /* HistoryViewController.m */,
+				F2557B962D8074F50033AEC2 /* VideoViewController.h */,
+				F2557B972D8074F50033AEC2 /* VideoViewController.m */,
+				F2557BA62D830CD80033AEC2 /* VideoView.h */,
+				F2557BA72D830CD80033AEC2 /* VideoView.m */,
+				F2557B8F2D805ACC0033AEC2 /* HistoryCollectionViewCell.h */,
+				F2557B902D805ACC0033AEC2 /* HistoryCollectionViewCell.m */,
+				F2557B8C2D8054380033AEC2 /* WaterFallLayout.h */,
+				F2557B8D2D8054380033AEC2 /* WaterFallLayout.m */,
+				F2557B832D8050CD0033AEC2 /* HistoryView.h */,
+				F2557B842D8050CD0033AEC2 /* HistoryView.m */,
+				F2557B862D8050E20033AEC2 /* HistoryModel.h */,
+				F2557B872D8050E20033AEC2 /* HistoryModel.m */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F2557B732D7F04FD0033AEC2 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				F2557AF52D7735E80033AEC2 /* BooksViewController.h */,
+				F2557AF62D7735E80033AEC2 /* BooksViewController.m */,
+			);
+			path = Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +477,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2557B9D2D8303B10033AEC2 /* 暂停.jpg in Resources */,
 				F2557B132D788FB70033AEC2 /* 杭州.jpg in Resources */,
 				F2557B162D788FDF0033AEC2 /* 西藏.jpg in Resources */,
 				F2557B112D788FB10033AEC2 /* 内蒙古.jpg in Resources */,
+				F2557BA52D830B8E0033AEC2 /* 视频点赞.jpg in Resources */,
+				F2557B9B2D82F5F30033AEC2 /* 视频.mp4 in Resources */,
 				F2557AF02D7734480033AEC2 /* 美食.jpg in Resources */,
 				F2557AF42D7734570033AEC2 /* 历史.jpg in Resources */,
 				F2557B712D7DC97E0033AEC2 /* 杭州按钮.jpg in Resources */,
@@ -422,16 +495,21 @@
 				F2557AB62D772AF60033AEC2 /* Base in Resources */,
 				F2557B0D2D788F9C0033AEC2 /* 西安.jpg in Resources */,
 				F2557B6C2D7DC97E0033AEC2 /* 桂林按钮.jpg in Resources */,
+				F2557BA42D830B8E0033AEC2 /* 收藏.jpg in Resources */,
 				F2557B1B2D79985F0033AEC2 /* 字魂古藤手书(商用需授权).ttf in Resources */,
 				F2557AFE2D77420F0033AEC2 /* 字小魂菱方体(商用需授权).ttf in Resources */,
+				F2557B952D806AE90033AEC2 /* 点赞.jpg in Resources */,
 				F2557AEE2D77343F0033AEC2 /* 风景.jpg in Resources */,
 				F2557B6D2D7DC97E0033AEC2 /* 成都按钮.jpg in Resources */,
 				F2557B6F2D7DC97E0033AEC2 /* 三亚按钮.jpg in Resources */,
+				F2557BA32D830B8E0033AEC2 /* 评论.jpg in Resources */,
 				F2557AB12D772AF40033AEC2 /* Base in Resources */,
 				F2557B1D2D79B0B20033AEC2 /* 头像.jpg in Resources */,
 				F2557B172D788FDF0033AEC2 /* 哈尔滨.jpg in Resources */,
+				F2557B932D805E860033AEC2 /* 历史封面.jpg in Resources */,
 				F2557B192D7890180033AEC2 /* 香港.jpg in Resources */,
 				F2557B0F2D788FAA0033AEC2 /* 甘肃.jpg in Resources */,
+				F2557B9F2D830A0D0033AEC2 /* 返回.jpg in Resources */,
 				F2557AFC2D773E6F0033AEC2 /* 书籍.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,14 +563,20 @@
 				F2557B062D7879F40033AEC2 /* ButtonTableViewCell.m in Sources */,
 				F2557AE42D772D2B0033AEC2 /* SightsView.m in Sources */,
 				F2557AF72D7735E80033AEC2 /* BooksViewController.m in Sources */,
+				F2557B982D8074F60033AEC2 /* VideoViewController.m in Sources */,
+				F2557B912D805ACC0033AEC2 /* HistoryCollectionViewCell.m in Sources */,
+				F2557B852D8050CD0033AEC2 /* HistoryView.m in Sources */,
 				F2557B032D7879E80033AEC2 /* ScrollTableViewCell.m in Sources */,
 				F2557ADD2D772BDF0033AEC2 /* SightsViewController.m in Sources */,
+				F2557B8E2D8054380033AEC2 /* WaterFallLayout.m in Sources */,
 				F2557AE72D772FDB0033AEC2 /* FoodsViewController.m in Sources */,
 				F2557AFA2D7735F10033AEC2 /* HistoryViewController.m in Sources */,
 				F2557AE12D772D200033AEC2 /* SightsModel.m in Sources */,
 				F2557AAE2D772AF40033AEC2 /* ViewController.m in Sources */,
 				F2557AA82D772AF40033AEC2 /* AppDelegate.m in Sources */,
 				F2557AB92D772AF60033AEC2 /* main.m in Sources */,
+				F2557B882D8050E20033AEC2 /* HistoryModel.m in Sources */,
+				F2557BA82D830CD80033AEC2 /* VideoView.m in Sources */,
 				F2557B092D787A050033AEC2 /* ListTableViewCell.m in Sources */,
 				F2557AEB2D7730E10033AEC2 /* TabBarViewController.m in Sources */,
 				F2557AAB2D772AF40033AEC2 /* SceneDelegate.m in Sources */,

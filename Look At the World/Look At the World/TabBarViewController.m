@@ -19,11 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0]];
+    
+    [self.view setBackgroundColor:[UIColor whiteColor]];
     self.tabBar.translucent = NO;
     self.tabBar.barTintColor = [UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0];
     self.tabBar.shadowImage = [[UIImage alloc] init];
     self.tabBar.backgroundImage = [[UIImage alloc] init];
+    
     [self loadTabBar];
     for (NSString *familyName in [UIFont familyNames]) {
         NSLog(@"字体家族名称: %@", familyName);
