@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Default Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LuoGuoChengMaoBiXiaoXingJianTi-2.ttf</string>
+		<string>XiangJiaoKuanMaoShuaLingGanTi-2.ttf</string>
+		<string>ZiHunJianQiShouShu(ShangYongXuShouQuan)-2.ttf</string>
+		<string>XiangJiaoQuWanLingGanTi-2.ttf</string>
+		<string>fulu-luxi-2.ttf</string>
+		<string>字小魂菱方体(商用需授权).ttf</string>
+		<string>字魂古藤手书(商用需授权).ttf</string>
+	</array>
+</dict>
+</plist>
