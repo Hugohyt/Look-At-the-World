@@ -9,6 +9,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <YYModel/YYModel.h>
 #import "NoticeModel.h"
+#import "LoginModel.h"
 //111
 typedef void (^NetworkCompletionHandler)(id  _Nullable responseObject, NSError * _Nullable error);
 NS_ASSUME_NONNULL_BEGIN
@@ -22,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
                      image:(UIImage *)image
                 parameters:(NSDictionary *)parameters
                  completion:(NetworkCompletionHandler)completion;
+@property (nonatomic, strong) LoginSubModel* personalModel;
+- (LoginSubModel*) getModel;
 
 @end
 

@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface LoginModel : NSObject
 @property (nonatomic, retain) NSString* code;
 @property (nonatomic, retain) NSString* msg;
-@property (nonatomic, retain) NSDictionary* data;
+@property (nonatomic, retain) LoginSubModel* data;
 @end
 
 NS_ASSUME_NONNULL_END

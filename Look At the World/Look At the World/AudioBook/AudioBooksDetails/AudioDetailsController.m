@@ -137,7 +137,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == 2) {
         AudioPlayViewController* player = [[AudioPlayViewController alloc] init];
-        player.modalPresentationStyle = UIModalPresentationFullScreen;
+        player.modalPresentationStyle = UIModalPresentationOverFullScreen;
 //        player.previousViewControllerView = self.audioDetailsView;
         player.bookImage = [[UIImageView alloc] init];
         player.bookImage.image = self.bookImage.image;

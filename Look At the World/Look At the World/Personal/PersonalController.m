@@ -96,13 +96,10 @@
     if (indexPath.row == 2) {
         ChangeController* chang = [[ChangeController alloc] init];
         // 1. 设置透明模态样式
-        chang.modalPresentationStyle = UIModalPresentationPageSheet;
-
+//        chang.modalPresentationStyle = UIModalPresentationPopover;
         // 2. 设置淡入淡出动画
-        chang.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-
-        // 3. 透明背景（允许看到父VC内容）
-        chang.view.backgroundColor = [UIColor clearColor];
+        chang.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+        
         [self presentViewController:chang animated:YES completion:nil];
     }
 }

@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) MyTextField* passwordText;
 @property (nonatomic, strong) MyTextField* nameText;
 @property (nonatomic, strong) MyTextField* codeText;
+@property (nonatomic, strong) UIView* changeView;
 @property (nonatomic, strong) UIButton* codeBtn;
 @property (nonatomic, strong) UIButton* registerBtn;
 @property (nonatomic, strong) UIButton* exitBtn;

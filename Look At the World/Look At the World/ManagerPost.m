@@ -34,12 +34,22 @@ static ManagerPost* managerSington = nil;
             if(completion) {
                 completion(responseObject, nil);
             }
+            LoginModel* loginmodel = [LoginModel yy_modelWithJSON:responseObject];
+            LoginSubModel* loginSubModel = loginmodel.data;
+            if(loginSubModel.name != nil) {
+                self.personalModel = loginmodel.data;
+                NSLog(@"data = %@", self.personalModel.name);
+            }
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if(completion) {
                 completion(nil, error);
             }
         }];
     } 
+}
+
+- (LoginSubModel*) getModel {
+    return self.personalModel;
 }
 
 - (void)uploadImageToServer:(NSString *)url

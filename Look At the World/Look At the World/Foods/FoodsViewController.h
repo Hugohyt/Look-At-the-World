@@ -15,6 +15,7 @@
 #import "FoodDetailController.h"
 #import "LoginSubModel.h"
 #import "FoodListModel.h"
+#import "ManagerPost.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FoodsViewController : UIViewController <UIViewControllerTransitioningDelegate>

@@ -102,6 +102,7 @@
 		80726E1A2DA10A970018404E /* AudioDetailDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80726E192DA10A970018404E /* AudioDetailDataModel.m */; };
 		80726E1D2DA10DDF0018404E /* AudioListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80726E1C2DA10DDF0018404E /* AudioListDataModel.m */; };
 		80D883F72DA7B55D0063E0BB /* ChangeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D883F62DA7B55D0063E0BB /* ChangeController.m */; };
+		80D883FA2DA7E09D0063E0BB /* CollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D883F92DA7E09D0063E0BB /* CollectionController.m */; };
 		AE9DD3F59460615779971F25 /* libPods-Look At the World.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7141B4A1EE94765282E4B8D /* libPods-Look At the World.a */; };
 		F2557AA82D772AF40033AEC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557AA72D772AF40033AEC2 /* AppDelegate.m */; };
 		F2557AAB2D772AF40033AEC2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2557AAA2D772AF40033AEC2 /* SceneDelegate.m */; };
@@ -301,6 +302,8 @@
 		80726E1C2DA10DDF0018404E /* AudioListDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioListDataModel.m; sourceTree = "<group>"; };
 		80D883F52DA7B55D0063E0BB /* ChangeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeController.h; sourceTree = "<group>"; };
 		80D883F62DA7B55D0063E0BB /* ChangeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeController.m; sourceTree = "<group>"; };
+		80D883F82DA7E09D0063E0BB /* CollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionController.h; sourceTree = "<group>"; };
+		80D883F92DA7E09D0063E0BB /* CollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionController.m; sourceTree = "<group>"; };
 		A7141B4A1EE94765282E4B8D /* libPods-Look At the World.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Look At the World.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65E75971F4B8AF96D0DDB83 /* Pods-Look At the World.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Look At the World.release.xcconfig"; path = "Target Support Files/Pods-Look At the World/Pods-Look At the World.release.xcconfig"; sourceTree = "<group>"; };
 		F2557AA32D772AF40033AEC2 /* Look At the World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Look At the World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,6 +404,8 @@
 				80688D8F2DA69B070046B864 /* PersonalView.m */,
 				80D883F52DA7B55D0063E0BB /* ChangeController.h */,
 				80D883F62DA7B55D0063E0BB /* ChangeController.m */,
+				80D883F82DA7E09D0063E0BB /* CollectionController.h */,
+				80D883F92DA7E09D0063E0BB /* CollectionController.m */,
 				80688D992DA6AC230046B864 /* StarModel.h */,
 				80688D9A2DA6AC230046B864 /* StarModel.m */,
 				80688D962DA6AAC50046B864 /* StarTableViewCell.h */,
@@ -1010,6 +1015,7 @@
 				F2557AEB2D7730E10033AEC2 /* TabBarViewController.m in Sources */,
 				80726E172DA10A000018404E /* AudioDetailModel.m in Sources */,
 				807097102D8AF05400C738C9 /* AudioDetailsController.m in Sources */,
+				80D883FA2DA7E09D0063E0BB /* CollectionController.m in Sources */,
 				F2557AAB2D772AF40033AEC2 /* SceneDelegate.m in Sources */,
 				807096882D8315A700C738C9 /* MyTextField.m in Sources */,
 			);

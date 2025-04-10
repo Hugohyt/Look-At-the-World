@@ -23,7 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", self.personalModel);
+    id managerpost = [ManagerPost sharedManager];
+    LoginSubModel* personal = [managerpost getModel];
+    NSLog(@"name = %@", personal.name);
     self.imageArr = [NSMutableArray array];
     self.detailsArr = [NSArray array];
     self.activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyleMedium)];

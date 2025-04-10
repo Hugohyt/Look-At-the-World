@@ -9,8 +9,8 @@
 
 @implementation LoginModel
 
-+ (NSDictionary*)modelContainerPropertyGenericClass {
-    return @{@"data":[LoginSubModel class]};
-}
+//+ (NSDictionary*)modelContainerPropertyGenericClass {
+//    return @{@"data":[LoginSubModel class]};
+//}
 
 @end

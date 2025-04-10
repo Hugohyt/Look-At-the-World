@@ -22,16 +22,27 @@
     self.registerBtn = [[UIButton alloc] init];
     self.codeBtn = [[UIButton alloc] init];
     self.exitBtn = [[UIButton alloc] init];
+    self.changeView = [[UIView alloc] init];
+    [self.view addSubview:self.changeView];
+    [self.changeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_offset(300);
+        make.left.mas_offset(0);
+        make.width.equalTo(self.view); // 修正：使用 equalTo 设置宽度等于 self.view
+        make.bottom.equalTo(self.view);
+    }];
+    self.changeView.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    [self RegisterViewSetting];
 }
 
 -(void) RegisterViewSetting {
-    [self.view addSubview:self.nameText];
-    [self.view addSubview:self.emailText];
-    [self.view addSubview:self.passwordText];
-    [self.view addSubview:self.codeText];
-    [self.view addSubview:self.codeBtn];
-    [self.view addSubview:self.registerBtn];
-    [self.view addSubview:self.exitBtn];
+    [self.changeView addSubview:self.nameText];
+    [self.changeView addSubview:self.emailText];
+    [self.changeView addSubview:self.passwordText];
+    [self.changeView addSubview:self.codeText];
+    [self.changeView addSubview:self.codeBtn];
+    [self.changeView addSubview:self.registerBtn];
+    [self.changeView addSubview:self.exitBtn];
     
     [self.nameText mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_offset(60);

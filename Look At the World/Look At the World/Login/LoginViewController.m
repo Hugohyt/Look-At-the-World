@@ -294,7 +294,6 @@
         //        }
            
             [self loadTabBar:personalModel];
-            NSLog(@"%@", personalModel);
 //            LoginSubModel* personalModel = [LoginSubModel yy_modelWithDictionary:registerModel.data];
             [self.delegate AddTabBar:self.tabbarViewController];
         }
