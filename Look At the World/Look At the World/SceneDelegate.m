@@ -55,7 +55,7 @@
     // to restore the scene back to its current state.
 }
 
-- (void)AddTabBar:(UITabBarController * _Nonnull)tb {
+- (void)AddTabBar:(UITabBarController * _Nonnull)tb{
     NSLog(@"Scen");
     self.window.rootViewController = tb;
     [self.window makeKeyAndVisible];

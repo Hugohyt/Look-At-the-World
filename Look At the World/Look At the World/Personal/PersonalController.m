@@ -17,6 +17,8 @@
     [super viewDidLoad];
     self.personalView = [[PersonalView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.personalView];
+    self.personalView.mytableView.delegate = self;
+    self.personalView.mytableView.dataSource = self;
     [self.personalView.avatarImageBtn addTarget:self action:@selector(PressImageBtn) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -33,7 +35,7 @@
     [self.personalView.avatarImageBtn setImage:image forState:UIControlStateNormal];
     id manager = [ManagerPost sharedManager];
     NSString* url = @"https://travel.knoci.cn/user/userdue/postavatar";
-    NSDictionary* heads = @{@"Authorization":@"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI4YTNlODViNi05YWQ2LTQ5YTAtYWRhMy1mNDI2MjA1ZjlhMTgiLCJuYW1lIjoiTE8iLCJlbWFpbCI6Imh0dHBzOi8vYXZhdGFycy5naXRodWJ1c2VyY29udGVudC5jb20vdS8xMjkwNzgxOTQiLCJhdmF0YXIiOiIzMjYxMDc4OTQwQHFxLmNvbSIsImV4cCI6MTc0NDY1MTY1MCwibmJmIjoxNzQ0MjE5NjUwLCJpYXQiOjE3NDQyMTk2NTB9.qCI3H-zRBrcjRaFv1-WraF8W1TNyuAC0CJGDCETVVJU", @"Content-Type":@"image/jpg"};
+    NSDictionary* heads = @{@"Authorization":@"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI4YTNlODViNi05YWQ2LTQ5YTAtYWRhMy1mNDI2MjA1ZjlhMTgiLCJuYW1lIjoiTE8iLCJlbWFpbCI6Imh0dHBzOi8vYXZhdGFycy5naXRodWJ1c2VyY29udGVudC5jb20vdS8xMjkwNzgxOTQiLCJhdmF0YXIiOiIzMjYxMDc4OTQwQHFxLmNvbSIsImV4cCI6MTc0NDcwNTEzMSwibmJmIjoxNzQ0MjczMTMxLCJpYXQiOjE3NDQyNzMxMzF9.JLvkU4ZlEdrIZ7UPRUyFF1CR_HFw1NGwMdqzxvY05Vo", @"Content-Type":@"image/jpg"};
     [manager uploadImageToServer:url image:image parameters:heads completion:^(id  _Nullable responseObject, NSError * _Nullable error) {
         if(error) {
             if ([error.domain isEqualToString:AFURLResponseSerializationErrorDomain]) {
@@ -60,5 +62,48 @@
     }];
     // 关闭 UIImagePickerController
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString* cellStr = @"cell";
+    UITableViewCell* cell = [self.personalView.mytableView dequeueReusableCellWithIdentifier:cellStr];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
+    }
+    if(indexPath.row == 0) {
+        cell.textLabel.text = @"美食收藏";
+    } else if(indexPath.row == 1) {
+        cell.textLabel.text = @"图文收藏";
+    } else {
+        cell.textLabel.text = @"更改信息";
+    }
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 2) {
+        ChangeController* chang = [[ChangeController alloc] init];
+        // 1. 设置透明模态样式
+        chang.modalPresentationStyle = UIModalPresentationPageSheet;
+
+        // 2. 设置淡入淡出动画
+        chang.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+
+        // 3. 透明背景（允许看到父VC内容）
+        chang.view.backgroundColor = [UIColor clearColor];
+        [self presentViewController:chang animated:YES completion:nil];
+    }
 }
 @end

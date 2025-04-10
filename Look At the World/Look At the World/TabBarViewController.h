@@ -6,11 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LoginSubModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TabBarViewController : UITabBarController
 
+@property (nonatomic, strong) LoginSubModel* personalModel;
+- (instancetype)initWithUserModel:(LoginSubModel *)userModel;
 - (void)loadTabBar;
 
 @end

@@ -13,6 +13,7 @@
 #import "ModelViewController.h"
 #import "NoticeModel.h"
 #import "FoodDetailController.h"
+#import "LoginSubModel.h"
 #import "FoodListModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSMutableArray* foodArray;
 @property (nonatomic, strong) FoodListModel* listModel;
+@property (nonatomic, strong) LoginSubModel* personalModel;
 
 @end
 

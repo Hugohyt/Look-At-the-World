@@ -21,8 +21,10 @@
 
 @implementation FindPasswordController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"ViewDidload");
     self.view.backgroundColor = [UIColor whiteColor];
     self.viewModel = [[LoginViewModel alloc] init];
     self.findPasswordView = [[FindPasswordView alloc] init];

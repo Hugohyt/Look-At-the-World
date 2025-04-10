@@ -42,7 +42,6 @@
     self.applyName.font = [UIFont fontWithName:@"Luoguochengmaobixiaoxingjianti" size:42];
     [self.view addSubview:self.applyName];
     self.applyName.text = text;
-    
     self.applyName.textAlignment = NSTextAlignmentCenter;
     [self.applyName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(@0);
@@ -56,14 +55,12 @@
 -(void) ImageSetting {
     self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"登录背景图.jpg"]];
     [self.view addSubview:self.backgroundImage];
-    
     [self.backgroundImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_offset(0);
         make.left.mas_offset(0);
         make.width.mas_equalTo(self.view);
         make.height.mas_offset(330);
     }];
-    
     self.skipBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.view addSubview:self.skipBtn];
     [self.skipBtn setTitle:@"跳过" forState:UIControlStateNormal];
@@ -80,7 +77,6 @@
 -(void) PressSkip {
     NSLog(@"111");
     self.tabbarViewController = [[TabBarViewController alloc] init];
-
     [self.delegate AddTabBar:self.tabbarViewController];
 }
 
@@ -285,7 +281,21 @@
         } else {
             LoginModel* registerModel = [LoginModel yy_modelWithJSON:responseObject];
             NSLog(@"%@", registerModel.msg);
-            self.tabbarViewController = [[TabBarViewController alloc] init];
+            LoginSubModel* personalModel = [LoginSubModel yy_modelWithDictionary:registerModel.data];
+            self.tabbarViewController = [[UITabBarController alloc] init];
+            [self.tabbarViewController.view setBackgroundColor:[UIColor whiteColor]];
+            self.tabbarViewController.tabBar.translucent = NO;
+            self.tabbarViewController.tabBar.backgroundImage = [[UIImage alloc] init];
+        //    for (NSString *familyName in [UIFont familyNames]) {
+        //            NSLog(@"字体家族名称: %@", familyName);
+        //            for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+        //                NSLog(@"\t字体名称: %@", fontName);
+        //            }
+        //        }
+           
+            [self loadTabBar:personalModel];
+            NSLog(@"%@", personalModel);
+//            LoginSubModel* personalModel = [LoginSubModel yy_modelWithDictionary:registerModel.data];
             [self.delegate AddTabBar:self.tabbarViewController];
         }
     }];
@@ -315,10 +325,9 @@
     }
     return YES;
 }
-
+ 
 - (void)textFieldDidChangeSelection:(UITextField *)textField {
     if(textField.tag == 101 || textField.tag == 202) {
-        NSLog(@"给他");
         self.loginViewModel.emailInputText = textField.text;
     } else if (textField.tag == 102 || textField.tag == 203) {
         self.loginViewModel.passwordInputText = textField.text;
@@ -426,7 +435,22 @@
         } else {
             LoginModel* loginModel = [LoginModel yy_modelWithJSON:responseObject];
             NSLog(@"%@", loginModel);
-            self.tabbarViewController = [[TabBarViewController alloc] init];
+            
+            LoginSubModel* personalModel = [LoginSubModel yy_modelWithDictionary: loginModel.data];
+            self.tabbarViewController = [[UITabBarController alloc] init];
+            [self.tabbarViewController.view setBackgroundColor:[UIColor whiteColor]];
+            self.tabbarViewController.tabBar.translucent = NO;
+            self.tabbarViewController.tabBar.backgroundImage = [[UIImage alloc] init];
+        //    for (NSString *familyName in [UIFont familyNames]) {
+        //            NSLog(@"字体家族名称: %@", familyName);
+        //            for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+        //                NSLog(@"\t字体名称: %@", fontName);
+        //            }
+        //        }
+           
+            [self loadTabBar:personalModel];
+            NSLog(@"%@", personalModel);
+//            LoginSubModel* personalModel = [LoginSubModel yy_modelWithDictionary:registerModel.data];
             [self.delegate AddTabBar:self.tabbarViewController];
         }
     } ];
@@ -459,10 +483,8 @@
     
     if ([keyPath isEqualToString:@"internalIsQQEmail"]) {
         BOOL isQQEmail = [change[NSKeyValueChangeNewKey] boolValue];
-        NSLog(@"第二个结果：%d", isQQEmail);
         self.loginEmailvalid = isQQEmail;
         if (isQQEmail) {
-            NSLog(@"不是");
             self.loginView.emailText.rightViewMode = UITextFieldViewModeNever;
             self.registerView.emailText.rightViewMode = UITextFieldViewModeNever;
         } else {
@@ -471,10 +493,8 @@
         }
     } else if([keyPath isEqualToString:@"internalIsQQpassword"]) {
         BOOL isQQEmail = [change[NSKeyValueChangeNewKey] boolValue];
-        NSLog(@"第二个结果：%d", isQQEmail);
         self.loginPasswordValid = isQQEmail;
         if (isQQEmail) {
-            NSLog(@"不是");
             self.loginView.passwordText.rightViewMode = UITextFieldViewModeNever;
             self.registerView.passwordText.rightViewMode = UITextFieldViewModeNever;
         } else {
@@ -483,8 +503,6 @@
         }
     }
     self.loginView.loginBtn.enabled = self.loginEmailvalid && self.loginPasswordValid;
-    
-    NSLog(@"name = %d, code = %d", self.nameValid, self.codeValid);
     if(self.loginView.loginBtn.enabled) {
         [self.loginView.loginBtn setBackgroundColor:[UIColor colorWithRed:173/255.0 green:216/255.0 blue:230/255.0 alpha:1.0]];
     } else {
@@ -513,5 +531,56 @@
     }];
     [alertController addAction:okAction];
     [viewController presentViewController:alertController animated:YES completion:nil];
+}
+
+- (void)loadTabBar:(LoginSubModel*)personalModel {
+    NSLog(@"loadTabBar");
+    SightsViewController* sightsViewController = [[SightsViewController alloc] init];
+    FoodsViewController* foodsViewController = [[FoodsViewController alloc] init];
+    BooksViewController* booksViewController = [[BooksViewController alloc] init];
+    HistoryViewController* historyViewController = [[HistoryViewController alloc] init];
+    foodsViewController.personalModel = personalModel;
+    
+    UIImage *sightsTabImage = [[UIImage imageNamed:@"风景.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *foodsTabImage = [[UIImage imageNamed:@"美食.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *booksTabImage = [[UIImage imageNamed:@"书籍.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *historyTabImage = [[UIImage imageNamed:@"历史.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    UITabBarItem *tabBarSightsItem = [[UITabBarItem alloc] initWithTitle:@"人间有美" image:sightsTabImage selectedImage:sightsTabImage];
+    UITabBarItem *tabBarFoodsItem = [[UITabBarItem alloc] initWithTitle:@"人间有味" image:foodsTabImage selectedImage:foodsTabImage];
+    UITabBarItem *tabBarBooksItem = [[UITabBarItem alloc] initWithTitle:@"人间有道" image:booksTabImage selectedImage:booksTabImage];
+    UITabBarItem *tabBarHistoryItem = [[UITabBarItem alloc] initWithTitle:@"人间有趣" image:historyTabImage selectedImage:historyTabImage];
+    
+    UIFont *customFont = [UIFont fontWithName:@"zihun98hao-lingfangti" size:18];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName: customFont,
+                                                        NSForegroundColorAttributeName: [UIColor brownColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName: customFont,
+                                                        NSForegroundColorAttributeName: [UIColor colorWithRed:0.5 green:0.25 blue:0 alpha:1]} forState:UIControlStateSelected];
+    
+    tabBarSightsItem.titlePositionAdjustment = UIOffsetMake(0, +10);
+    tabBarFoodsItem.titlePositionAdjustment = UIOffsetMake(0, +10);
+    tabBarBooksItem.titlePositionAdjustment = UIOffsetMake(0, +10);
+    tabBarHistoryItem.titlePositionAdjustment = UIOffsetMake(0, +10);
+ 
+//    tabBarSightsItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
+//    tabBarFoodsItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
+//    tabBarBooksItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
+//    tabBarHistoryItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
+    
+    sightsViewController.tabBarItem = tabBarSightsItem;
+    foodsViewController.tabBarItem = tabBarFoodsItem;
+    booksViewController.tabBarItem = tabBarBooksItem;
+    historyViewController.tabBarItem = tabBarHistoryItem;
+    
+    
+    UINavigationController *navSightsViewController = [[UINavigationController alloc] initWithRootViewController: sightsViewController];
+    UINavigationController *navFoodsViewController = [[UINavigationController alloc] initWithRootViewController: foodsViewController];
+    UINavigationController *navBooksViewController = [[UINavigationController alloc] initWithRootViewController: booksViewController];
+    UINavigationController *navHistoryViewController = [[UINavigationController alloc] initWithRootViewController: historyViewController];
+    
+    NSArray *array = [NSArray arrayWithObjects:navSightsViewController, navFoodsViewController, navBooksViewController, navHistoryViewController, nil];
+    
+    self.tabbarViewController.viewControllers = array;
+    self.tabbarViewController.selectedIndex = 1;
 }
 @end

@@ -14,11 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PersonalView : UIView <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UIButton* avatarImageBtn;
 @property (nonatomic, strong) UILabel* nameLabel;
-@property (nonatomic, strong) UISegmentedControl *segmentedControl;
-@property (nonatomic, strong) UITableView *leftTableView;
-@property (nonatomic, strong) UITableView *rightTableView;
-@property (nonatomic, strong) NSMutableArray<StarModel*> *leftData;
-@property (nonatomic, strong) NSMutableArray<StarModel*> *rightData;
+@property (nonatomic, strong) UITableView* mytableView;
+//@property (nonatomic, strong) UISegmentedControl *segmentedControl;
+//@property (nonatomic, strong) UITableView *leftTableView;
+//@property (nonatomic, strong) UITableView *rightTableView;
+//@property (nonatomic, strong) NSMutableArray<StarModel*> *leftData;
+//@property (nonatomic, strong) NSMutableArray<StarModel*> *rightData;
 
 @end
 

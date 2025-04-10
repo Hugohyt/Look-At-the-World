@@ -21,16 +21,27 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.tabBar.translucent = NO;
-    self.tabBar.barTintColor = [UIColor whiteColor];
-    self.tabBar.shadowImage = [[UIImage alloc] init];
+//    self.tabBar.barTintColor = [UIColor whiteColor];
+//    self.tabBar.shadowImage = [[UIImage alloc] init];
     self.tabBar.backgroundImage = [[UIImage alloc] init];
-    for (NSString *familyName in [UIFont familyNames]) {
-            NSLog(@"字体家族名称: %@", familyName);
-            for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-                NSLog(@"\t字体名称: %@", fontName);
-            }
-        }
+//    for (NSString *familyName in [UIFont familyNames]) {
+//            NSLog(@"字体家族名称: %@", familyName);
+//            for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//                NSLog(@"\t字体名称: %@", fontName);
+//            }
+//        }
+    NSLog(@"%@", self.personalModel);
     [self loadTabBar];
+}
+
+- (instancetype)initWithUserModel:(LoginSubModel *)userModel {
+    self = [super initWithNibName:nil bundle:nil];
+    if (self) {
+        self.personalModel = userModel;
+        // 可以在这里进行其他初始化操作，如设置子视图控制器等
+        NSLog(@"personalModel = %@", self.personalModel);
+    }
+    return self;
 }
 
 
@@ -47,7 +58,6 @@
     UIImage *booksTabImage = [[UIImage imageNamed:@"书籍.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImage *historyTabImage = [[UIImage imageNamed:@"历史.jpg"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
-    
     UITabBarItem *tabBarSightsItem = [[UITabBarItem alloc] initWithTitle:@"人间有美" image:sightsTabImage selectedImage:sightsTabImage];
     UITabBarItem *tabBarFoodsItem = [[UITabBarItem alloc] initWithTitle:@"人间有味" image:foodsTabImage selectedImage:foodsTabImage];
     UITabBarItem *tabBarBooksItem = [[UITabBarItem alloc] initWithTitle:@"人间有道" image:booksTabImage selectedImage:booksTabImage];
@@ -63,9 +73,7 @@
     tabBarFoodsItem.titlePositionAdjustment = UIOffsetMake(0, +10);
     tabBarBooksItem.titlePositionAdjustment = UIOffsetMake(0, +10);
     tabBarHistoryItem.titlePositionAdjustment = UIOffsetMake(0, +10);
-    
-    
-    
+ 
 //    tabBarSightsItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
 //    tabBarFoodsItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
 //    tabBarBooksItem.imageInsets = UIEdgeInsetsMake(16, 0, -16, 0);
@@ -85,6 +93,7 @@
     NSArray *array = [NSArray arrayWithObjects:navSightsViewController, navFoodsViewController, navBooksViewController, navHistoryViewController, nil];
     
     self.viewControllers = array;
+    self.selectedIndex = 2;
 }
 
 

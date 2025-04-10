@@ -6,6 +6,11 @@
 //
 
 #import "LoginViewModel.h"
+#import "TabBarViewController.h"
+#import "SightsViewController.h"
+#import "FoodsViewController.h"
+#import "BooksViewController.h"
+#import "HistoryViewController.h"
 
 @interface LoginViewModel ()
 @end
@@ -70,7 +75,6 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"emailInputText"]) {
         NSString *newText = change[NSKeyValueChangeNewKey];
-        NSLog(@"开始判断");
         NSString *pattern = @"@[a-zA-Z0-9]{2,3}\\.com$";
         NSError *error = nil;
         // 创建正则表达式对象
@@ -97,4 +101,6 @@
     [self removeObserver:self forKeyPath:@"emailInputText"];
     [self removeObserver:self forKeyPath:@"passwordInputText"];  
 }
+
+
 @end

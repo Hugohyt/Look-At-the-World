@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIButton* skipBtn;
 @property (nonatomic, strong) LoginViewModel* loginViewModel;
 @property(nonatomic, assign) id<LoginViewDelegate> delegate;
-@property (nonatomic, strong) TabBarViewController* tabbarViewController;
+@property (nonatomic, strong) UITabBarController* tabbarViewController;
 @property (nonatomic, strong) FindPasswordController* findPasswordController;
 @property (nonatomic, strong) UIAlertController* alertController;
 @end

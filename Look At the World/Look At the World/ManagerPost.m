@@ -83,15 +83,40 @@ static ManagerPost* managerSington = nil;
           }
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
               // 成功回调
+        NSLog(@"OKOKshjashjasj");
               if (completion) {
                   completion(responseObject, nil);
               }
           }
           failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
               // 失败回调
+        NSLog(@"NONONO");
+        if(error) {
+            if ([error.domain isEqualToString:AFURLResponseSerializationErrorDomain]) {
+                    // server error
+                NSData *responseData = error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey];
+                NoticeModel *errorModel = [NoticeModel yy_modelWithJSON:responseData];
+                if (errorModel) {
+                    
+                    NSLog(@"服务器返回错误码: %ld，错误信息: %@", (long)errorModel.code, errorModel.msg);
+                }
+            } else if ([error.domain isEqualToString:NSCocoaErrorDomain]) {
+                // server throw exception
+                NSLog(@"服务器抛出异常，请稍后重试");
+            } else if ([error.domain isEqualToString:NSURLErrorDomain]) {
+                // network error
+                NSLog(@"网络连接错误，请检查网络设置");
+            } else {
+                // 其他未知错误
+                NSLog(@"发生未知错误: %@", error.localizedDescription);
+            }
+        } else {
+            NSLog(@"上传成功");
+        }
               if (completion) {
                   completion(nil, error);
               }
+       
           }];
     
 }
