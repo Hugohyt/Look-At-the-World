@@ -23,17 +23,17 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     self.tabBar.translucent = NO;
     self.tabBar.barTintColor = [UIColor colorWithRed:0.95 green:0.9 blue:0.8 alpha:1.0];
+//    self.tabBar.barTintColor = [UIColor whiteColor];
     self.tabBar.shadowImage = [[UIImage alloc] init];
     self.tabBar.backgroundImage = [[UIImage alloc] init];
     
     [self loadTabBar];
-    for (NSString *familyName in [UIFont familyNames]) {
-        NSLog(@"字体家族名称: %@", familyName);
-        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-            NSLog(@"\t字体名称: %@", fontName);
-        }
-    }
-
+//    for (NSString *familyName in [UIFont familyNames]) {
+//        NSLog(@"字体家族名称: %@", familyName);
+//        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//            NSLog(@"\t字体名称: %@", fontName);
+//        }
+//    }
 }
 
 - (void)loadTabBar {

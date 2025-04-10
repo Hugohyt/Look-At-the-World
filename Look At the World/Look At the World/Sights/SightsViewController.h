@@ -11,10 +11,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, TableViewLoadState) {
+    TableViewLoadStateIdle,      // 空闲状态
+    TableViewLoadStateLoading,   // 加载中
+    TableViewLoadStateInit     // 初始化数据
+};
+
 @interface SightsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property(strong, nonatomic, readwrite)SightsView *sightsView;
 @property(strong, nonatomic, readwrite)SightsModel *sightsModel;
+@property(strong, nonatomic, readwrite)NSMutableArray* sightsModelArray;
+@property(assign, nonatomic, readwrite)TableViewLoadState* loadState;
 
 @end
 

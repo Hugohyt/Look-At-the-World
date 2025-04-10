@@ -7,6 +7,7 @@
 
 #import "HistoryCollectionViewCell.h"
 #import "Masonry.h"
+#import "UIImageView+WebCache.h"
 
 @implementation HistoryCollectionViewCell
 
@@ -28,12 +29,12 @@
     [self.contentView addSubview:self.likesButton];
     [self.contentView addSubview:self.nameLabel];
     
-    self.historyImageView.frame = CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height - 80);
-    self.titleLabel.frame = CGRectMake(10, self.historyImageView.frame.size.height + 5, self.contentView.frame.size.width - 20, 40);
-    self.avatarImageView.frame = CGRectMake(10, self.historyImageView.frame.size.height + 50, 20, 20);
-    self.likesButton.frame = CGRectMake(self.contentView.frame.size.width - 70, self.historyImageView.frame.size.height + 50, 20, 20);
-    self.likesCountLabel.frame = CGRectMake(self.contentView.frame.size.width - 50, self.historyImageView.frame.size.height + 50, 40, 20);
-    self.nameLabel.frame = CGRectMake(35, self.historyImageView.frame.size.height + 50, 70, 20);
+//    self.historyImageView.frame = CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height - 80);
+//    self.titleLabel.frame = CGRectMake(10, self.historyImageView.frame.size.height + 5, self.contentView.frame.size.width - 20, 40);
+//    self.avatarImageView.frame = CGRectMake(10, self.historyImageView.frame.size.height + 50, 20, 20);
+//    self.likesButton.frame = CGRectMake(self.contentView.frame.size.width - 70, self.historyImageView.frame.size.height + 50, 20, 20);
+//    self.likesCountLabel.frame = CGRectMake(self.contentView.frame.size.width - 50, self.historyImageView.frame.size.height + 50, 40, 20);
+//    self.nameLabel.frame = CGRectMake(35, self.historyImageView.frame.size.height + 50, 70, 20);
 
     self.titleLabel.font = [UIFont systemFontOfSize:16];
     self.titleLabel.textColor = [UIColor colorWithRed:184/255.0 green:154/255.0 blue:116/255.0 alpha:1.0];
@@ -49,6 +50,17 @@
     self.titleLabel.lineBreakMode = YES;
     
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    self.historyImageView.frame = CGRectMake(0, 0, self.contentView.frame.size.width, self.contentView.frame.size.height - 80);
+    self.titleLabel.frame = CGRectMake(10, self.historyImageView.frame.size.height + 5, self.contentView.frame.size.width - 20, 40);
+    self.avatarImageView.frame = CGRectMake(10, self.historyImageView.frame.size.height + 50, 20, 20);
+    self.likesButton.frame = CGRectMake(self.contentView.frame.size.width - 70, self.historyImageView.frame.size.height + 50, 20, 20);
+    self.likesCountLabel.frame = CGRectMake(self.contentView.frame.size.width - 50, self.historyImageView.frame.size.height + 50, 40, 20);
+    self.nameLabel.frame = CGRectMake(35, self.historyImageView.frame.size.height + 50, 70, 20);
 }
 
 @end

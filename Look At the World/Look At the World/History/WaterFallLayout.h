@@ -9,8 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 @interface WaterFallLayout : UICollectionViewFlowLayout
 
+@property (strong, nonatomic, readwrite)NSMutableArray* imageArray;;
 @end
 
 NS_ASSUME_NONNULL_END

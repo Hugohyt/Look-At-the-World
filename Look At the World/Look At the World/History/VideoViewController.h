@@ -11,25 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface VideoViewController : UIViewController
+@interface VideoViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic, readwrite)AVPlayer* player;
-@property (strong, nonatomic, readwrite)UIImageView* pauseIconImageView;
-@property (strong, nonatomic, readwrite)VideoView* videoView;
-@property (strong, nonatomic, readwrite)UISlider* progressSlider;
-@property (assign, nonatomic, readwrite)BOOL isSliding;
-@property (strong, nonatomic, readwrite)id playTimeObserver;
-@property (strong, nonatomic, readwrite)UILabel *timeLabel;
-@property (strong, nonatomic, readwrite)UIButton* likeButton;
-@property (strong, nonatomic, readwrite)UIButton* commentButton;
-@property (strong, nonatomic, readwrite)UIButton* starButton;
-@property (strong, nonatomic, readwrite)UILabel* likesLabel;
-@property (strong, nonatomic, readwrite)UILabel* commentsLabel;
-@property (strong, nonatomic, readwrite)UILabel* starsLabel;
-@property (strong, nonatomic, readwrite)UILabel* nameLabel;
-@property (strong, nonatomic, readwrite)UILabel* detailLabel;
-@property (strong, nonatomic, readwrite)UIImageView* avatarImageView;
-@property (strong, nonatomic, readwrite)CAGradientLayer* gradientLayer;
+@property (strong, nonatomic, readwrite)UITableView* videoTableView;
+@property (assign, nonatomic, readwrite)NSInteger currentIndex;
+@property (strong, nonatomic)NSDictionary* articleModelDicitionary;
+@property (strong, nonatomic) NSMutableArray* videoArray;
+@property (strong, nonatomic)NSString* videoID;
 
 @end
 

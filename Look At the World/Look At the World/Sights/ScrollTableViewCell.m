@@ -6,6 +6,7 @@
 //
 
 #import "ScrollTableViewCell.h"
+#import "Masonry/Masonry.h"
 
 static const int width = 394;
 
@@ -42,6 +43,11 @@ static const int width = 394;
     [self.sightsScrollView setContentOffset:CGPointMake(width - 20, 0)];
     
     [self.contentView addSubview:self.sightsScrollView];
+    [self.sightsScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(width - 20);
+        make.height.mas_equalTo(240);
+        make.top.bottom.equalTo(self.contentView);
+    }];
     if (!self.timer) {
         self.timer = [NSTimer scheduledTimerWithTimeInterval:7.0 target:self selector:@selector(scrollToNext) userInfo:nil repeats:YES];
     }

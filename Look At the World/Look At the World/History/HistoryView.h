@@ -6,12 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WaterFallLayout.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HistoryView : UIView
 
 @property (strong, nonatomic, readwrite)UICollectionView* historyCollectionView;
+@property (strong, nonatomic, readwrite)UIButton* releaseButton;
+@property (strong, nonatomic, readwrite)WaterFallLayout* waterFallLayout;
 
 @end
 

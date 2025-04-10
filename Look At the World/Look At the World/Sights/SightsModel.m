@@ -6,7 +6,12 @@
 //
 
 #import "SightsModel.h"
+#import "SightsSubModel.h"
 
 @implementation SightsModel
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"data":[SightsSubModel class]};
+}
 
 @end

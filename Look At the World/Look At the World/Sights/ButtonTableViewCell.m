@@ -45,6 +45,9 @@
     CGFloat buttonHeight = 95;
     
     [self.buttons enumerateObjectsUsingBlock:^(UIButton * _Nonnull button, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        button.tag = idx;
+        
         int row = (int)(idx / columns);
         int col = (int)(idx % columns);
         
@@ -55,8 +58,12 @@
             make.height.equalTo(@(buttonHeight));
         }];
     }];
+    [[self.buttons lastObject] mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.contentView).offset(-10);
+    }];
     
     return self;
 }
+
 
 @end

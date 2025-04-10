@@ -17,15 +17,21 @@ static const CGFloat width = 394;
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
+    self.waterFallLayout = [[WaterFallLayout alloc] init];
+    self.waterFallLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    self.waterFallLayout.footerReferenceSize = CGSizeMake(394, 100);
     
-    WaterFallLayout* waterFallLayout = [[WaterFallLayout alloc] init];
-    waterFallLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
-    
-    self.historyCollectionView = [[UICollectionView alloc] initWithFrame: CGRectMake(0, 0, width, 760) collectionViewLayout:waterFallLayout];
+    self.historyCollectionView = [[UICollectionView alloc] initWithFrame: CGRectMake(0, 0, width, 760) collectionViewLayout:self.waterFallLayout];
     [self.historyCollectionView registerClass:[HistoryCollectionViewCell class] forCellWithReuseIdentifier:@"HistoryCollectionViewCell"];
     self.historyCollectionView.backgroundColor = [UIColor grayColor];
     [self addSubview:self.historyCollectionView];
+    
+//    self.releaseButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self.releaseButton setImage:[UIImage imageNamed:@"发布.jpg"] forState:UIControlStateNormal];
+//    self.releaseButton.frame = CGRectMake(343, 30, 40, 40);
+//    [self addSubview:self.releaseButton];
+    
     return self;
 }
 

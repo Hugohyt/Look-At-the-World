@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SightsModel : NSObject
 
+@property (strong, nonatomic, readwrite)NSString* code;
+@property (strong, nonatomic, readwrite)NSArray* data;
+@property (strong, nonatomic, readwrite)NSString* msg;
+
 @end
 
 NS_ASSUME_NONNULL_END

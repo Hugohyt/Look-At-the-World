@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic, readwrite)UILabel* titleLabel;
 @property (strong, nonatomic, readwrite)UILabel* likesCountLabel;
 @property (strong, nonatomic, readwrite)UILabel* nameLabel;
+@property (strong, nonatomic, readwrite)NSIndexPath* currentIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END
